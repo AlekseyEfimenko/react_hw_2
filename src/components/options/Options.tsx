@@ -1,6 +1,12 @@
-import css from './Options.module.css'
+import css from './Options.module.css';
 
-const Options = ({ onUpdate, isReset, onReset }) => {
+type Props = {
+  onUpdate: (a: string) => void;
+  isReset: boolean;
+  onReset: () => void;
+}
+
+const Options: React.FC<Props> = ({ onUpdate, isReset, onReset }) => {
   
   return (
     <div className={css.options}>
